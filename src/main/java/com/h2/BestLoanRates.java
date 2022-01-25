@@ -1,8 +1,7 @@
 package com.h2;
 
-
-import java.util.Scanner;
 import java.util.Map;
+import java.util.Scanner;
 
 public class BestLoanRates {
     public static final Map<Integer, Float> bestRates = Map.of(
@@ -21,9 +20,9 @@ public class BestLoanRates {
         int loanTermInYears = scanner.nextInt();
         float bestRate = getRates(loanTermInYears);
         if(bestRate == 0.0f) {
-            System.out.println("No available rates for the term of " + loanTermInYears + " years");
+            System.out.println("No available rates for term: " + loanTermInYears + " years");
         } else {
-            System.out.println("The best available rate is " + bestRate + "%");
+            System.out.println("Best Available Rate: " + bestRate + "%");
         }
     }
 
